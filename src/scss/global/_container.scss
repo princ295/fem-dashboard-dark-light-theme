@@ -1,0 +1,61 @@
+@use "./mixins" as *;
+
+
+.container {
+  max-width: rem(1110);
+  padding: 0 rem(25);
+  margin: rem(36) auto rem(46);
+  @include breakpoint-up(large){
+    padding: 0;
+  }
+}
+
+// .container {
+//   --mwidth: 1792px;
+//   // height: 100%;
+//   // width: 100%;
+//   padding: 0 var(--padding);
+//   max-width: calc(var(--mwidth) + (var(--padding) * 2));
+//   margin: 0 auto;
+//   background-color: aliceblue;
+
+//   @media screen and (min-width: 1024px) {
+//     --padding: 4rem;
+//     background-color: pink;
+//   }
+
+//   @media screen and (max-width: 1023px) {
+//     --padding: 2.5rem;
+//     background-color: hotpink;
+//   }
+
+//   @media screen and (max-width: 639px) {
+//     --padding: 1.25rem;
+//   }
+
+//   &.--base {
+//     --mwidth: 1376px;
+//   }
+
+//   &.--slim {
+//     --mwidth: 1152px;
+//   }
+
+//   &.--x-slim {
+//     --mwidth: 848px;
+//     --padding: 0;
+//     max-width: 53rem;
+//   }
+
+//   &.--left {
+//     padding-left: 0;
+//     margin-left: 0;
+//     max-width: calc(var(--mwidth) + var(--padding) + ((100vw - var(--mwidth)) / 2));
+//   }
+
+//   &.--right {
+//     padding-right: 0;
+//     margin-right: 0;
+//     max-width: calc(var(--mwidth) + var(--padding) + ((100vw - var(--mwidth)) / 2));
+//   }
+// }
