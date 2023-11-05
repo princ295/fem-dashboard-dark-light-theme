@@ -23,7 +23,7 @@
     "paths": {
       "@components/*": ["./components/bem-blocks/*"],
       "@ui/*": ["./scss/*"]
-    }
+    },
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

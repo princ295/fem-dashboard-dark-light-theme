@@ -68,6 +68,9 @@ h6 {
 	flex-direction: column;
 }
 
+.--mt-1 {
+	margin: 1rem;
+}
 .cards {
 	@include breakpoint-up(midium) {
 		display: flex;

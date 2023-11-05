@@ -1,0 +1,138 @@
+// @use '../../../scss/global/mixins' as *;
+
+@use './../mixins' as *;
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(30);
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+.card {
+  background: var(--color_card-dark-bg);
+  // width: rem(255);
+  padding: rem(25);
+  border-radius: rem(5);
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  transition: background 150ms ease-in-out;
+
+
+  &:hover {
+    background: var(--color_dark-card-hover);
+  }
+
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    justify-items: start;
+
+    gap: rem(21);
+  }
+
+  &--facebook {
+    border-top: 5px solid var(--color_facebook);
+  }
+
+  &__platfrom {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    margin-top: rem(5);
+    margin-bottom: rem(28);
+  }
+
+  &__icon {
+    margin-right: rem(8);
+  }
+
+  &__follower {
+    color: var(--color_dark-text2);
+    margin-bottom: rem(25);
+  }
+
+  &__count {
+    margin-bottom: rem(4);
+    font-weight: 700;
+    letter-spacing: rem(-2);
+
+    &--big {
+      font-size: rem(56);
+
+    }
+
+    &--small {
+      font-size: rem(32);
+    }
+  }
+
+  &__username {
+    font-weight: 700;
+    font-size: rem(12);
+    color: var(--color_dark-text1);
+  }
+
+  &__label {
+    font-size: rem(12);
+    letter-spacing: rem(5);
+    font-weight: 400;
+    color: var(--color_dark-text1);
+  }
+
+  &__change {
+    font-size: rem(12);
+    font-weight: 700;
+    color: var(--color_lime-green);
+  }
+
+  &__number {
+    margin-left: 4px;
+  }
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  justify-items: start;
+
+  gap: rem(21);
+
+  .card__subtitle {
+    font-weight: bold;
+    font-size: rem(14);
+    color: var(--color_dark-text1);
+  }
+
+  img, .card__count {
+    margin: 0;
+  }
+  .card__change {
+    align-self: end;
+  }
+
+  img, .card__change{
+    justify-self: end;
+  }
+}
+
+._cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(30);
+}
