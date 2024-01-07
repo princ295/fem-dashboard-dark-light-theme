@@ -14,7 +14,7 @@ function App() {
       <div className="container">
         <h2 className="--mt-1">Overview - Today</h2>
         <div className="cards">
-          {[1, 2, 3, 4, 1, 2, 3, 4, ].map(el =>
+          {[ 1, 2, 3, 4, ].map(el =>
          
               <div className="card card-grid">
                 <div className="card__subtitle">Page Views</div>
